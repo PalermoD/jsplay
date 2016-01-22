@@ -1,5 +1,5 @@
 // example of a javascript object literal 
-//  Good for saving the state of an object
+// Good for saving the state of an object
 // like if that object does not change 
 var person = {
 	firstName: "Palermo",
@@ -28,7 +28,6 @@ var dice = {
     }
 }
 
-
 console.log(dice.roll());
 
 
@@ -38,10 +37,20 @@ function Contact( name, email ){
 	this.email = email;
 }
 
-
 // Creating a new instance of contact constuctor function 
 // good for creating multiple instances of similar objects like new contacts with diffrent values 
 var palermo = new Contact("Palermo", "palermo.deschamps@gmail.com");
 
 console.log(palermo);
+
+// Turning dice object into a constuctor function 
+
+function Dice(sides){
+	this.roll = function(){
+	var randomNumber = Math.floor( Math.random() * sides) + 1;
+	return randomNumber;
+    }
+}
+
+var dice1 = new Dice(6);
 
