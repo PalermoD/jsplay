@@ -21,9 +21,9 @@ function diceRoll(){
 // object literal of the dice with a roll property 
 
 var dice = {
-	roll: function(){
-	var sides = 6;
-	var randomNumber = Math.floor( Math.random() * sides) + 1;
+	sides : 6,
+	roll : function(){
+	var randomNumber = Math.floor( Math.random() * dice.sides) + 1;
 	console.log(randomNumber);
     }
 }
