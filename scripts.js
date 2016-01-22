@@ -18,7 +18,7 @@ function diceRoll(){
 }
 
 
-// object literal of the dice 
+// object literal of the dice with a roll property 
 
 var dice = {
 	roll: function(){
