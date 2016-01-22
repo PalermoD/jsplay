@@ -46,11 +46,15 @@ console.log(palermo);
 // Turning dice object into a constuctor function 
 
 function Dice(sides){
-	this.roll = function(){
-	var randomNumber = Math.floor( Math.random() * sides) + 1;
-	return randomNumber;
-    }
+	this.sides = sides;
 }
+
+// adding a prototype shared function for the roll method 
+Dice.prototype.roll = function(){
+	var randomNumber = Math.floor( Math.random() * this.sides) + 1;
+	return randomNumber;
+}
+
 
 var dice1 = new Dice(6);
 
